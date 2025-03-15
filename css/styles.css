@@ -1,0 +1,170 @@
+/* General styles */
+body {
+    font-family: 'Magic Hat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(27, 27, 27);
+    overflow-x: hidden;
+}
+
+/* Header styles */
+header {
+    background-color: black;
+    color: white;
+    padding: 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+nav ul li {
+    margin: 1.7% 9%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 13% 0%;
+}
+
+nav ul li a:hover {
+    color: #555; /* Change color when hovering */
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgb(137, 0, 0);
+    font-size: 1.2rem;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 3% 5%;
+        font-size: 3%;
+    }
+}
+
+/* Main content */
+main {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding-top: 2.9rem;
+}
+
+/* Section styling */
+section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0rem 0rem;
+}
+
+/* Text styles */
+h1, h2, p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 6rem;
+    top: 1.2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    top: 1%;
+}
+
+h2 a {
+    text-decoration: none;  /* Remove underline */
+    color: inherit; /* Inherit color from the parent (white) */
+    cursor: pointer; /* Ensure it still behaves like a clickable link */
+}
+
+/* Optional: Subtle hover effect */
+h2 a:hover {
+    color: #bbb; /* Light gray on hover */
+}
+
+p {
+    font-size: 1.2rem;
+    top: 6.8rem;
+}
+
+/* Adjust font sizes and positioning for mobile */
+@media screen and (max-width: 780px) {
+    h1 {
+        font-size: 6rem;
+        top: 4%;
+    }
+
+    h2 {
+        font-size: 1.85rem;
+        top: 1%;
+    }
+
+    p {
+        font-size: 1rem;
+        top: 23%;
+    }
+}
+
+/* Sub-text styling */
+.sub-text {
+    position: absolute;
+    top: 97%;
+    text-align: left;
+    padding: 0 5%;
+    font-size: 0.6rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+}
+
+/* Image styles */
+section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Mobile Image Resizing */
+@media screen and (max-width: 768px) {
+    section img {
+        height: 60vh;
+    }
+}
