@@ -11,7 +11,7 @@
         /* RUNS "LEARN MORE" BUTTON */
         function toggleDropdown(id) {
             var content = document.getElementById(id);
-            var arrow = event.target.querySelector('.arrow'); // Find the arrow inside the clicked h1 element
+            var arrow = event.target.closest('h1').querySelector('.arrow'); // Find the arrow inside the closest h1 element
             var navbarHeight = document.querySelector("nav")?.offsetHeight || 0; // Adjust based on navbar height
 
             if (content.style.display === "block") {
