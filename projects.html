@@ -11,12 +11,15 @@
         /* RUNS "LEARN MORE" BUTTON */
         function toggleDropdown(id) {
             var content = document.getElementById(id);
+            var arrow = event.target.querySelector('.arrow'); // Find the arrow inside the clicked h1 element
             var navbarHeight = document.querySelector("nav")?.offsetHeight || 0; // Adjust based on navbar height
 
             if (content.style.display === "block") {
                 content.style.display = "none";
+                arrow.classList.remove('rotated'); // Remove rotation when dropdown is closed
             } else {
                 content.style.display = "block";
+                arrow.classList.add('rotated'); // Add rotation when dropdown is open
                 setTimeout(() => {
                     let targetPosition = content.getBoundingClientRect().top + window.scrollY - navbarHeight - 10;
                     smoothScroll(targetPosition, 600);
@@ -89,7 +92,14 @@
         <nav>
             <ul>
                 <li class="logo"><a href="index.html">M</a></li>
-                <li><a href="Projects.html">Projects</a></li>
+                <li class="dropdown">
+                    <a href="Projects.html">Projects</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#feature-films">Feature Films</a></li>
+                        <li><a href="#shorts">Shorts</a></li>
+                        <li><a href="#commercial">Commercial</a></li>
+                    </ul>
+                </li>
                 <li><a href="Team.html">Team</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -107,7 +117,7 @@
                     <h2>The Day Players</h2>
                     <p>A heist plotted by a mysterious crime lord is carried out by a gang of young criminals whilst two desperate detectives hatch a risky sting operation to stop them.</p>
                     <p>Status: In Pre-Production</p>
-                    <h1 onclick="toggleDropdown('day-players')">Learn More ▼</h1>
+                    <h1 onclick="toggleDropdown('day-players')">Learn More<span class="arrow">▼</span></h1>
                 </div>
             </section>
             <div id="day-players" class="dropdown-content" dropdown-color="var(--dark-red)">
@@ -125,7 +135,7 @@
                     <h2>Mustard Man</h2>
                     <p>KJ leaves school, unsure if he'll ever return. He arrives home, only to find that his parents have moved without telling him.</p>
                     <p>Available on <a href="https://www.amazon.com/Mustard-Man-Roman-Lynch/dp/B0D2KYMSZ2" target="_blank">Prime Video</a></p>
-                    <h1 onclick="toggleDropdown('mustard-man')">Learn More ▼</h1>
+                    <h1 onclick="toggleDropdown('mustard-man')">Learn More<span class="arrow">▼</span></h1>
                 </div>
                 <img src="images/ph_image_2.jpg" alt="mustard-man">
             </section>
@@ -149,7 +159,7 @@
                     <h2>White Abyss</h2>
                     <p>Kids get cold</p>
                     <p>Available on <a href="https://www.amazon.com/Mustard-Man-Roman-Lynch/dp/B0D2KYMSZ2" target="_blank">Prime Video</a></p>
-                    <h1 onclick="toggleDropdown('white-abyss')">Learn More ▼</h1>
+                    <h1 onclick="toggleDropdown('white-abyss')">Learn More<span class="arrow">▼</span></h1>
                 </div>
             </section>
             <div id="white-abyss" class="dropdown-content" dropdown-color="var(--white)">
@@ -167,7 +177,7 @@
                     <h2>Who Killed Bradley</h2>
                     <p>death</p>
                     <p>Available on <a href="https://www.amazon.com/Mustard-Man-Roman-Lynch/dp/B0D2KYMSZ2" target="_blank">Prime Video</a></p>
-                    <h1 onclick="toggleDropdown('wkb')">Learn More ▼</h1>
+                    <h1 onclick="toggleDropdown('wkb')">Learn More<span class="arrow">▼</span></h1>
                 </div>
                 <img src="images/ph_image_2.jpg" alt="wkb">
             </section>
@@ -187,7 +197,7 @@
                     <h2>Banito</h2>
                     <p>cold death</p>
                     <p>Available on <a href="https://www.amazon.com/Mustard-Man-Roman-Lynch/dp/B0D2KYMSZ2" target="_blank">Prime Video</a></p>
-                    <h1 onclick="toggleDropdown('banito')">Learn More ▼</h1>
+                    <h1 onclick="toggleDropdown('banito')">Learn More<span class="arrow">▼</span></h1>
                 </div>
             </section>
             <div id="banito" class="dropdown-content" dropdown-color="var(--white)">
@@ -205,7 +215,7 @@
                     <h2>Antho</h2>
                     <p>short films</p>
                     <p>Available on <a href="https://www.amazon.com/Mustard-Man-Roman-Lynch/dp/B0D2KYMSZ2" target="_blank">Prime Video</a></p>
-                    <h1 onclick="toggleDropdown('antho')">Learn More ▼</h1>
+                    <h1 onclick="toggleDropdown('antho')">Learn More<span class="arrow">▼</span></h1>
                 </div>
                 <img src="images/ph_image_2.jpg" alt="antho">
             </section>
@@ -227,7 +237,7 @@
                     <h2>Cosmos Institute</h2>
                     <p>Convo clips</p>
                     <p>ergfg</p>
-                    <h1 onclick="toggleDropdown('cosmos-insitute')">Learn More ▼</h1>
+                    <h1 onclick="toggleDropdown('cosmos-insitute')">Learn More<span class="arrow">▼</span></h1>
                 </div>
                 <img src="images/ph_image_1.jpg" alt="Cosmos Insitute">
             </section>

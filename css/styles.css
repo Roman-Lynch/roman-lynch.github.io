@@ -22,7 +22,7 @@ header {
     box-sizing: border-box;
 }
 
-/* Navigation styles */
+/* NAV BAR SET UP */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -52,6 +52,92 @@ nav ul li a:hover {
     color: rgb(137, 0, 0);
     font-size: 1.2rem;
 }
+/* NAV SET UP */
+
+/* NAV BAR FADE IN */ 
+nav ul li {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Apply the animation with a delay for each page item */
+nav ul li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+nav ul li:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+nav ul li:nth-child(3) {
+    animation-delay: 0.35s;
+}
+
+nav ul li:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* NAV BAR FADE IN */
+
+/* NAV BAR DROP DOWN */
+nav ul li.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li.dropdown a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0% 0%;
+    display: block;
+    position: relative;
+    border-radius: 4%; /* Rounded corners for cleaner appearance */
+}
+
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 10rem; /* Adjusted to make the dropdown wider */
+    z-index: 1;
+    top: 100%;
+    left: 50%; /* Center the dropdown */
+    transform: translateX(-50%); /* Ensure it's perfectly centered */
+    border-radius: 4%; /* Rounded corners */
+    box-shadow: 0 4% 6% rgba(0, 0, 0, 0.2); /* Subtle shadow for a cleaner look */
+    overflow: hidden; /* Prevents overflow from showing */
+}
+
+nav ul li .dropdown-content li {
+    padding: 1rem;
+    text-align: center; /* Center the text inside the dropdown items */
+}
+
+nav ul li .dropdown-content li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li .dropdown-content li a:hover {
+    color: #bbb; /* Lighten the color on hover */
+}
+/* NAV BAR DROP DOWN */
 
 /* Responsive Navigation */
 @media screen and (max-width: 768px) {
@@ -88,6 +174,9 @@ section {
 
 /* Text styles */
 h1, h2, p {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 0.5s;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -96,6 +185,7 @@ h1, h2, p {
     color: white;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 3; /* Ensure text is on top of the image */
 }
 
 h1 {
@@ -114,7 +204,7 @@ h2 a {
     cursor: pointer; /* Ensure it still behaves like a clickable link */
 }
 
-/* Optional: Subtle hover effect */
+/* ADD HOVER EFFECT */
 h2 a:hover {
     color: #bbb; /* Light gray on hover */
 }
@@ -138,7 +228,7 @@ p {
 
     p {
         font-size: 1rem;
-        top: 23%;
+        top: 15%;
     }
 }
 
@@ -156,15 +246,41 @@ p {
 
 /* Image styles */
 section img {
+    opacity: 0;
+    animation: fadeInImage 2s forwards;
+    animation-delay: 1s; /* Delay to let text fade-in first */
     width: 100%;
     height: auto;
     object-fit: cover;
     display: block;
+    z-index: 2; /* Ensure the image stays below text */
+}
+
+/* Keyframe for image fade-in */
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Mobile Image Resizing */
 @media screen and (max-width: 768px) {
+    section {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Ensure each section takes full screen height */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0rem 0rem;
+    }
+
     section img {
-        height: 60vh;
+        height: 100%; /* Make image fill the section height */
     }
 }
