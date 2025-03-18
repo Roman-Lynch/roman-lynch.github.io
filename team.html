@@ -3,24 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="stylesheet" href="css/project_styles.css"> <!-- Link to external CSS -->
+    <title>Our Team</title>
+    <link rel="stylesheet" href="css/team_styles.css"> <!-- Link to external CSS -->
 </head>
 <body>
-
-    <!-- Header Section -->
+    <script>
+        // Get all the team members
+        // Get all the Learn More buttons inside team members
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all the Learn More buttons inside team members
+            const buttons = document.querySelectorAll('.learn-more-btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    console.log('Learn More button clicked!'); // Check if the button is clicked
+                    const card = this.closest('.card'); // Find the parent .card element
+                    card.classList.toggle('flipped'); // Toggle the 'flipped' class to trigger the flip effect
+                    console.log('Card flipped state:', card.classList.contains('flipped')); // Log the state of the flip
+                });
+            });
+        });
+    </script>
     <header>
         <nav>
             <ul>
                 <li class="logo"><a href="index.html">M</a></li>
-                <li><a href="Projects.html">Projects</a></li>
+                <li class="dropdown">
+                    <a href="Projects.html">Projects</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#feature-films">Feature Films</a></li>
+                        <li><a href="#shorts">Shorts</a></li>
+                        <li><a href="#commercial">Commercial</a></li>
+                    </ul>
+                </li>
                 <li><a href="Team.html">Team</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content Section -->
     <main>
+        <h1>Meet Our Team</h1>
+
+        <section class="team-container">
+            <!-- Row 1 -->
+            <div class="team-row">
+                <div class="team-member">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="images/BuffOneCard photo.jpg" alt="Team Member 1">
+                            <h2>Zach Mund</h2>
+                            <h3>Actor/Producer</h3>
+                            <p>A lead talent in 4 feature films, a talented producer, and</p>
+                            <button class="learn-more-btn">Learn More</button> <!-- Added Learn More button -->
+                        </div>
+                        <div class="card-back">
+                            <h2>Zach Mund</h2>
+                            <p>More details about Zach Mund, his background, and additional information.</p>
+                            <button class="learn-more-btn">Return</button> <!-- Added Learn More button -->
+                        </div>
+                    </div>
+                </div>                       
+                <div class="team-member">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="images/BuffOneCard photo.jpg" alt="Team Member 2">
+                            <h2>Ethan McAleavy</h2>
+                            <h3>Chief Editor</h3>
+                            <p>A lead talent in 4 feature films, a talented producer, and</p>
+                            <button class="learn-more-btn">Learn More</button> <!-- Added Learn More button -->
+                        </div>
+                        <div class="card-back">
+                            <h2>Ethan McAleavy</h2>
+                            <p>More details about Zach Mund, his background, and additional information.</p>
+                            <button class="learn-more-btn">Return</button> <!-- Added Learn More button -->
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="images/BuffOneCard photo.jpg" alt="Team Member 3">
+                            <h2>Albert DiCesare</h2>
+                            <h3>Actor/Producer</h3>
+                            <p>A lead talent in 4 feature films, a talented producer, and</p>
+                            <button class="learn-more-btn">Learn More</button> <!-- Added Learn More button -->
+                        </div>
+                        <div class="card-back">
+                            <h2>Albert DiCesare</h2>
+                            <p>More details about Zach Mund, his background, and additional information.</p>
+                            <button class="learn-more-btn">Return</button> <!-- Added Learn More button -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="team-row">
+                <div class="team-member">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="images/BuffOneCard photo.jpg" alt="Team Member 4">
+                            <h2>Nicole Vann</h2>
+                            <h3>Cinematographer</h3>
+                            <p>A lead talent in 4 feature films, a talented producer, and</p>
+                            <button class="learn-more-btn">Learn More</button> <!-- Added Learn More button -->
+                        </div>
+                        <div class="card-back">
+                            <h2>Nicole Vann</h2>
+                            <p>More details about Zach Mund, his background, and additional information.</p>
+                            <button class="learn-more-btn">Return</button> <!-- Added Learn More button -->
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="images/BuffOneCard photo.jpg" alt="Team Member 5">
+                            <h2>Roman Lynch</h2>
+                            <h3>Director</h3>
+                            <p>A lead talent in 4 feature films, a talented producer, and</p>
+                            <button class="learn-more-btn">Learn More</button> <!-- Added Learn More button -->
+                        </div>
+                        <div class="card-back">
+                            <h2>Roman Lynch</h2>
+                            <p>More details about Zach Mund, his background, and additional information.</p>
+                            <button class="learn-more-btn">Return</button> <!-- Added Learn More button -->
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="images/BuffOneCard photo.jpg" alt="Team Member 6">
+                            <h2>Kat Houston</h2>
+                            <h3>Actor/Producer</h3>
+                            <p>A lead talent in 4 feature films, a talented producer, and</p>
+                            <button class="learn-more-btn">Learn More</button> <!-- Added Learn More button -->
+                        </div>
+                        <div class="card-back">
+                            <h2>Kat Houston</h2>
+                            <p>More details about Zach Mund, his background, and additional information.</p>
+                            <button class="learn-more-btn">Return</button> <!-- Added Learn More button -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="team-row">
+                <div class="team-member">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="images/BuffOneCard photo.jpg" alt="Team Member 4">
+                            <h2>Kyle Varra</h2>
+                            <h3>Audio Technition</h3>
+                            <p>A lead talent in 4 feature films, a talented producer, and</p>
+                            <button class="learn-more-btn">Learn More</button> <!-- Added Learn More button -->
+                        </div>
+                        <div class="card-back">
+                            <h2>Kyle Varra</h2>
+                            <p>More details about Zach Mund, his background, and additional information.</p>
+                            <button class="learn-more-btn">Return</button> <!-- Added Learn More button -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer>
+    </footer>
 </body>
+</html>
