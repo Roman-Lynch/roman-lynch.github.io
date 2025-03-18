@@ -317,14 +317,33 @@ footer {
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-    nav ul li {
-        margin: 1.7% 10%;
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
     }
-    
-    nav ul li a {
-        text-decoration: none;
-        color: white;
-        font-size: 0.6rem;
+
+    nav ul li {
+        margin: 1.2% 4%;
+    }
+
+    nav ul li a, 
+    nav ul li.dropdown a {
+        font-size: 0.8rem; /* Make sure font sizes are consistent */
+        padding: 5px 10px; /* Adjust padding for better alignment */
+    }
+
+    nav ul li.dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul li .dropdown-content {
+        left: 0; 
+        transform: translateX(0); /* Ensures dropdown is left-aligned */
+        min-width: max-content; /* Prevents it from being too small */
     }
 
     h1 {

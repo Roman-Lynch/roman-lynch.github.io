@@ -300,13 +300,74 @@ h3 {
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
+    /* Nav bar adjustments */
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 1.2% 4%;
+    }
+
+    nav ul li a, 
+    nav ul li.dropdown a {
+        font-size: 0.8rem; /* Smaller font size for better fit */
+        padding: 5px 10px; /* Adjust padding */
+    }
+
+    /* Dropdown adjustments */
+    nav ul li.dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul li .dropdown-content {
+        left: 0;
+        transform: translateX(0);
+        min-width: max-content;
+    }
+
+    .team-container{
+        margin-top: 80%;
+    }
+
+    /* Team section adjustments */
     .team-row {
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically */
         align-items: center;
     }
 
     .team-member {
-        width: 80%;
-        margin-bottom: 10%;
+        width: 90%; /* Adjust width for mobile */
+        margin-bottom: 100%;
+    }
+
+    /* Adjust card image size */
+    .team-member img {
+        width: 100%;
+        height: auto;
+        border-radius: 20%;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Make the text on the back of the card fit better on mobile */
+    .card-back p {
+        font-size: 0.9rem; /* Smaller text size for better fit */
+    }
+
+    h1 {
+        font-size: 6rem; /* Adjust heading size on mobile */
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 0.9rem;
     }
 }
