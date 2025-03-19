@@ -155,7 +155,7 @@ nav ul li .dropdown-content li a:hover {
     nav ul li a, 
     nav ul li.dropdown a {
         font-size: 0.8rem; /* Make sure font sizes are consistent */
-        padding: 5px 10px; /* Adjust padding for better alignment */
+        padding: 0.5% 1%; /* Adjust padding for better alignment */
     }
 
     nav ul li.dropdown {
@@ -243,11 +243,12 @@ p {
     h2 {
         font-size: 1.85rem;
         top: 1%;
+        bottom: 1%;
     }
 
     p {
         font-size: 1rem;
-        top: 15%;
+        padding: 3.5%;
     }
 }
 
@@ -296,6 +297,7 @@ section img {
         justify-content: flex-end;
         align-items: center;
         box-sizing: border-box;
+        margin-top: 0%;
         padding: 0rem 0rem;
     }
 
