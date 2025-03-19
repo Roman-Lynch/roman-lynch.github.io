@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <link rel="stylesheet" href="css/team_styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <script>
+        // Get all the team members
+        // Get all the Learn More buttons inside team members
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all the Learn More buttons inside team members
+            const buttons = document.querySelectorAll('.learn-more-btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    console.log('Learn More button clicked!'); // Check if the button is clicked
+                    const card = this.closest('.card'); // Find the parent .card element
+                    card.classList.toggle('flipped'); // Toggle the 'flipped' class to trigger the flip effect
+                    console.log('Card flipped state:', card.classList.contains('flipped')); // Log the state of the flip
+                });
+            });
+        });
+    </script>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo"><a href="home.html">M</a></li>
+                <li class="dropdown">
+                    <a href="Projects.html">Projects</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#feature-films">Feature Films</a></li>
+                        <li><a href="#shorts">Shorts</a></li>
+                        <li><a href="#commercial">Commercial</a></li>
+                    </ul>
+                </li>
+                <li><a href="Team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Meet Our Team</h1>
+
+        <section class="team-container">
+            <!-- Row 1 -->
+            <div class="team-row">
+                <div class="team-member">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="images/zach_headshot.jpeg" alt="Team Member 1">
+                            <h2>Zach Mund</h2>
+                            <h3>Actor/Producer</h3>
+                            <p>A versatile actor, musician, and producer with engineering expertise, sharp improvisational skills, and a keen eye for design</p>
+                            <button class="learn-more-btn">Learn More</button> <!-- Added Learn More button -->
+                        </div>
+                        <div class="card-back">
+                            <h2>Zach Mund</h2>
+                            <p>Zach is an actor, writer, and producer who has been in the film industry for four years. His credits include three features and over a dozen shorts. Zach’s strengths are in songwriting and music production, with expertise in visual arts.</p>
+                            <p>Zach has been with Merlin since it's inception, participating in every projects. His notable projects include "Who Killed Bradly", and "Mustard Man".</p>
+                            <p><a href="https://www.instagram.com/zachmundart/#" class="clickable-text">Instagram</a></p>
+                            <p><a href="https://www.imdb.com/name/nm12904769/" class="clickable-text">IMDB</a></p>
+                            <p><a href="https://www.backstage.com/u/zach-mund/" class="clickable-text">Backstage</a></p>
+                            <button class="learn-more-btn">Return</button> <!-- Added Learn More button -->
+                        </div>
+                    </div>
+                </div>                       
+                <div class="team-member">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="images/ethan_headshot.jpg" alt="Team Member 2">
+                            <h2>Ethan McAleavy</h2>
+                            <h3>Post Production Manager</h3>
+                            <p>Ethan is passionate about post-production, from creating plugins and color grading to building sound libraries and 3D modeling, always pushing the future of Merlin's post house.</p>
+                            <button class="learn-more-btn">Learn More</button> <!-- Added Learn More button -->
+                        </div>
+                        <div class="card-back">
+                            <h2>Ethan McAleavy</h2>
+                            <p>Ethan is passionate about every aspect of post-production. Whether he's creating plugins, color grading, building a better sound library, or 3D modeling, he's always pushing the future of Merlin's post house.</p>
+                            <p>Zach has been with Merlin since the begining, working as a editor, director, and gafer. His notable projects include "White Abyss", and "Mustard Man".</p>
+                            <p><a href="linkedin.com/in/ethan-mcaleavy-3083b72b2" class="clickable-text">LinkedIn</a></p>
+                            <button class="learn-more-btn">Return</button> <!-- Added Learn More button -->
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="images/BuffOneCard photo.jpg" alt="Team Member 3">
+                            <h2>Albert DiCesare</h2>
+                            <h3>Actor/Producer</h3>
+                            <p>A lead talent in 4 feature films, a talented producer, and</p>
+                            <button class="learn-more-btn">Learn More</button> <!-- Added Learn More button -->
+                        </div>
+                        <div class="card-back">
+                            <h2>Albert DiCesare</h2>
+                            <p>More details about Zach Mund, his background, and additional information.</p>
+                            <button class="learn-more-btn">Return</button> <!-- Added Learn More button -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="team-row">
+                <div class="team-member">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="images/BuffOneCard photo.jpg" alt="Team Member 4">
+                            <h2>Nicole Vann</h2>
+                            <h3>Cinematographer</h3>
+                            <p>A lead talent in 4 feature films, a talented producer, and</p>
+                            <button class="learn-more-btn">Learn More</button> <!-- Added Learn More button -->
+                        </div>
+                        <div class="card-back">
+                            <h2>Nicole Vann</h2>
+                            <p>More details about Zach Mund, his background, and additional information.</p>
+                            <button class="learn-more-btn">Return</button> <!-- Added Learn More button -->
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="images/roman_headshot.jpg" alt="Team Member 5">
+                            <h2>Roman Lynch</h2>
+                            <h3>Writer/Director</h3>
+                            <p>A passionate director, writer, and producer, working across a wide range of projects, from creative feature films to detailed commercial work</p>
+                            <button class="learn-more-btn">Learn More</button> <!-- Added Learn More button -->
+                        </div>
+                        <div class="card-back">
+                            <h2>Roman Lynch</h2>
+                            <p>Roman Lynch is a versatile writer, director, and producer dabbling in several genres, including action, comedy, and horror. Inspired by the nature of guerrilla indie filmmaking, Roman strives to bring efficiency, authenticity, and enjoyment to every project he works on.</p>
+                            <p>As a founding member of Merlin, Roman has contributed to nearly every project in the catalog. His notable credits include writer/director of "Mustard" Man and "Banito".</p>
+                            <button class="learn-more-btn">Return</button> <!-- Added Learn More button -->
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="images/Kat_headshot.jpg" alt="Team Member 6">
+                            <h2>Kat Houston</h2>
+                            <h3>Cinematographer/Actor</h3>
+                            <p>Kat is a cinematographer and actor for Merlin Productions, who also enjoys dipping into all aspects of filmmaking possible.</p>
+                            <button class="learn-more-btn">Learn More</button> <!-- Added Learn More button -->
+                        </div>
+                        <div class="card-back">
+                            <h2>Kat Houston</h2>
+                            <p>Kat is an actor, writer, and DP currently based in Los Angeles, CA, having worked on many projects both in front of and behind the camera.</p>
+                            <p>Kat was one of the directors of photography and music writers on "Mustard Man", and helped extensivley with the pre-production of "Who Killed Bradley".</p>
+                            <p><a href="kathrinhouston.com" class="clickable-text">Website</a></p>
+                            <p><a href="https://www.youtube.com/@KatMouseProductions" class="clickable-text">YouTube</a></p>
+                            <button class="learn-more-btn">Return</button> <!-- Added Learn More button -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="team-row">
+                <div class="team-member">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="images/BuffOneCard photo.jpg" alt="Team Member 4">
+                            <h2>Kyle Varra</h2>
+                            <h3>Audio Technition</h3>
+                            <p>A lead talent in 4 feature films, a talented producer, and</p>
+                            <button class="learn-more-btn">Learn More</button> <!-- Added Learn More button -->
+                        </div>
+                        <div class="card-back">
+                            <h2>Kyle Varra</h2>
+                            <p>More details about Zach Mund, his background, and additional information.</p>
+                            <button class="learn-more-btn">Return</button> <!-- Added Learn More button -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+</html>
