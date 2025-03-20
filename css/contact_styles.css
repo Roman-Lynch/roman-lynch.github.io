@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Magic Hat";
+    src: url("https://db.onlinewebfonts.com/t/5c1fd0e2a234b5637013b2956a6dbe0c.eot");
+    src: url("https://db.onlinewebfonts.com/t/5c1fd0e2a234b5637013b2956a6dbe0c.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/5c1fd0e2a234b5637013b2956a6dbe0c.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/5c1fd0e2a234b5637013b2956a6dbe0c.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/5c1fd0e2a234b5637013b2956a6dbe0c.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/5c1fd0e2a234b5637013b2956a6dbe0c.svg#Magic Hat")format("svg");
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
