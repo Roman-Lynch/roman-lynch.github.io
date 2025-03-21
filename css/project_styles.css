@@ -314,6 +314,11 @@ main {
     font-size: 3rem;
 }
 
+.dropdown-text h3 {
+    font-size: 1.5rem;
+    padding: 0%;
+}
+
 .clickable-text {
     color: rgb(63, 72, 253); /* Sets text color */
     cursor: pointer; /* Changes cursor to indicate it's clickable */
